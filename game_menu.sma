@@ -5,6 +5,10 @@
 
 #pragma semicolon 1
 
+native give_money(id);
+native open_ability_menu(id);
+native open_weapon_menu(id);
+
 new const GAME_MENU_ID[] = "GameMenu";
 
 public plugin_init() 
@@ -66,9 +70,9 @@ GameMenu_Show(id)
     switch (key)
     {
         case 0: engclient_cmd(id, "chooseteam");
-        case 1: amxclient_cmd(id, "money");
-        case 2: amxclient_cmd(id, "capabilities");
-        case 3: amxclient_cmd(id, "weapon_menu");
+        case 1: give_money(id);
+        case 2: open_ability_menu(id);
+        case 3: open_weapon_menu(id);
     }
 
     return PLUGIN_HANDLED;
