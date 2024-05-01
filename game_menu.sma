@@ -17,7 +17,7 @@ public plugin_init()
 
     register_clcmd("chooseteam", "@Command_GameMenu");
 
-    register_menucmd(register_menuid(GAME_MENU_ID), 1023, "HandlGame_Menu");
+    register_menucmd(register_menuid(GAME_MENU_ID), 1023, "@HandlGame_Menu");
 }
 
 @Command_GameMenu(id)
